@@ -24,25 +24,31 @@
 
 ### Задание 1
 
-`Приведите ответ в свободной форме........`
+`
 
-1. `Заполните здесь этапы выполнения, если требуется ....`
-2. `Заполните здесь этапы выполнения, если требуется ....`
-3. `Заполните здесь этапы выполнения, если требуется ....`
-4. `Заполните здесь этапы выполнения, если требуется ....`
-5. `Заполните здесь этапы выполнения, если требуется ....`
-6. 
+1. Выполняя ДЗ, сверяйтесь с процессом отражённым в записи лекции.
+2. Установите PostgreSQL. Для установки достаточна та версия, что есть в системном репозитороии Debian 11.
+3. Пользуясь конфигуратором команд с официального сайта, составьте набор команд для установки последней версии Zabbix с поддержкой PostgreSQL и Apache.
+4. Выполните все необходимые команды для установки Zabbix Server и Zabbix Web Server.
+
+ 
 
 ```
 Поле для вставки кода...
-....
-....
-....
-....
-```
+sudo apt install postgresql
+# wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_6.0-4+debian11_all.deb
+# dpkg -i zabbix-release_6.0-4+debian11_all.deb
+# apt update
+# apt install zabbix-server-pgsql zabbix-frontend-php php7.4-pgsql zabbix-apache-conf zabbix-sql-scripts
+su - postgres -c 'psql --command "CREATE USER zabbix WITH PASSWORD '\'123456789\'';"'
+su - postgres -c 'psql --command "CREATE DATABASE zabbix OWNER zabbix;"'
+zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
+sed -i 's/# DBPassword=/DBPassword=/123456789/g' /etc/zabbix/zabbix_server.conf
 
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота 1](ссылка на скриншот 1)`
+
+`При необходимости прикрепитe сюда скриншоты'
+![install zabbix-server](https://github.com/smabramov/Zabbix/blob/33909bf0fcad53d8bdaa2ede24539621cbc91503/img/install%20zabbix-server.png)
+![web zabbix](https://github.com/smabramov/Zabbix/blob/33909bf0fcad53d8bdaa2ede24539621cbc91503/img/web%20zabbix.png)
 
 
 ---
