@@ -32,7 +32,7 @@
 4. Выполните все необходимые команды для установки Zabbix Server и Zabbix Web Server.
 
  
-
+```
 Поле для вставки кода...
 sudo apt install postgresql
 # wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_6.0-4+debian11_all.deb
@@ -43,8 +43,7 @@ su - postgres -c 'psql --command "CREATE USER zabbix WITH PASSWORD '\'123456789\
 su - postgres -c 'psql --command "CREATE DATABASE zabbix OWNER zabbix;"'
 zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
 sed -i 's/# DBPassword=/DBPassword=/123456789/g' /etc/zabbix/zabbix_server.conf
-
-
+```
 
 '![install zabbix-server](https://github.com/smabramov/Zabbix/blob/33909bf0fcad53d8bdaa2ede24539621cbc91503/img/install%20zabbix-server.png)'
 
