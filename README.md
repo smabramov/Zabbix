@@ -24,7 +24,7 @@
 
 ### Задание 1
 
-`
+
 
 1. Выполняя ДЗ, сверяйтесь с процессом отражённым в записи лекции.
 2. Установите PostgreSQL. Для установки достаточна та версия, что есть в системном репозитороии Debian 11.
@@ -33,7 +33,6 @@
 
  
 
-```
 Поле для вставки кода...
 sudo apt install postgresql
 # wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_6.0-4+debian11_all.deb
@@ -52,7 +51,7 @@ sed -i 's/# DBPassword=/DBPassword=/123456789/g' /etc/zabbix/zabbix_server.conf
 '![web zabbix](https://github.com/smabramov/Zabbix/blob/33909bf0fcad53d8bdaa2ede24539621cbc91503/img/web%20zabbix.png)'
 
 
----
+
 
 ### Задание 2
 
