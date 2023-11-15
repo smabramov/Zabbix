@@ -47,8 +47,8 @@ sed -i 's/# DBPassword=/DBPassword=/123456789/g' /etc/zabbix/zabbix_server.conf
 
 
 `При необходимости прикрепитe сюда скриншоты'
-![install zabbix-server](https://github.com/smabramov/Zabbix/blob/33909bf0fcad53d8bdaa2ede24539621cbc91503/img/install%20zabbix-server.png)
-![web zabbix](https://github.com/smabramov/Zabbix/blob/33909bf0fcad53d8bdaa2ede24539621cbc91503/img/web%20zabbix.png)
+'![install zabbix-server](https://github.com/smabramov/Zabbix/blob/33909bf0fcad53d8bdaa2ede24539621cbc91503/img/install%20zabbix-server.png)'
+'![web zabbix](https://github.com/smabramov/Zabbix/blob/33909bf0fcad53d8bdaa2ede24539621cbc91503/img/web%20zabbix.png)'
 
 
 ---
